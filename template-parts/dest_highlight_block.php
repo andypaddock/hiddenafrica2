@@ -38,29 +38,32 @@ $centreLocation = get_field('center_position', $term);?>
             </div>
             <?php elseif ($selectMedia == 'image'):?>
 
-            <div class="map-image image fmleft"
-                style="background-image: url(<?php echo esc_url($image['sizes']['large']); ?>)">
+            <div class="map-image image fmleft">
                 <a data-fslightbox="map" href="<?php echo esc_url($image['url']); ?>">
+                    <img src="<?php echo esc_url($image['sizes']['large']); ?>" />
                     <div class="overlay-link">
                         <span class="map-link"><i class="fa-solid fa-location-dot"></i> View Map</span>
                     </div>
                 </a>
             </div>
             <?php endif; ?>
+
             <div class="highlight-text">
-                <?php
+                <button type="button" class="collapsible"><?php echo single_term_title(); ?> Fast Facts</button>
+                <div class="content">
+                    <?php
                 if( have_rows('blocks', $term) ):
                 while ( have_rows('blocks', $term) ) : the_row();?>
-                <div class="text tile">
-                    <?php if (get_sub_field('title', $term)):?>
-                    <h3 class="heading-tertiary"><?php the_sub_field('title');?></h3>
-                    <?php endif;?>
-                    <?php the_sub_field('text', $term);?>
+                    <div class="text tile">
+                        <?php if (get_sub_field('title', $term)):?>
+                        <h3 class="heading-tertiary"><?php the_sub_field('title');?></h3>
+                        <?php endif;?>
+                        <?php the_sub_field('text', $term);?>
+                    </div>
+
+                    <?php endwhile; endif;?>
                 </div>
-
-                <?php endwhile; endif;?>
             </div>
-
 
 
 

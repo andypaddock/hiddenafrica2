@@ -328,7 +328,7 @@ jQuery(document).ready(function ($) {
   });
 
   new Readmore("article", {
-    collapsedHeight: 130,
+    collapsedHeight: 134,
   });
 
   new Readmore(".readmore", {
@@ -336,7 +336,7 @@ jQuery(document).ready(function ($) {
   });
 
   new Readmore(".staffreadmore", {
-    collapsedHeight: 130,
+    collapsedHeight: 134,
   });
 
   // SIDEBAR MOBILEMENU
@@ -583,3 +583,18 @@ jQuery(document).ready(function ($) {
 
   // GETTING RID OF OWL
 }); //Don't remove ---- end of jQuery wrapper
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}

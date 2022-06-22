@@ -73,3 +73,56 @@
     }
   }
 }
+.section-hightlightmap {
+  .highlight-text {
+    /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #ccc;
+  color: #444;
+  cursor: pointer;
+  font-family: $default-header-style;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding: 2rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  display: none;
+  &:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  @include respond(phone) {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+  &.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+}
+
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  @include respond(phone) {
+    max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background: $color-primary-bg-alt;
+  }
+}
+.text:first-of-type .heading-tertiary {
+  display: none;
+}
+  }
+}

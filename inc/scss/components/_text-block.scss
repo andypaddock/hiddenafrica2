@@ -102,6 +102,9 @@
   .alt-text {
     color: $color-white;
   }
+  @include respond(phone) {
+    padding: 2.5rem 0 0;
+  }
 }
 .count2 {
   columns: 2;
@@ -374,6 +377,7 @@
     @include respond(phone) {
       display: flex;
       flex-direction: column;
+      grid-gap: 0;
     }
   }
 }

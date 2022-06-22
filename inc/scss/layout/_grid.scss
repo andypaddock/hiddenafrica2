@@ -72,6 +72,9 @@ section {
   &.imgtext-slider {
     padding: 1rem 0;
   }
+  @include respond(phone) {
+    padding: 2.5rem 0;
+  }
 }
 .single-post section {
   padding: 2.5rem 0;
@@ -134,8 +137,7 @@ section {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: $gutter-horizontal;
   @include respond(tab-port) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .row.extended {

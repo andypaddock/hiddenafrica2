@@ -11,9 +11,9 @@
             <?php get_template_part('partials/simple','map');?>
             <?php elseif ($selectMedia == 'image'):?>
 
-            <div class="map-image image fmleft"
-                style="background-image: url(<?php echo esc_url($image['sizes']['large']); ?>)">
+            <div class="map-image image fmleft">
                 <a data-fslightbox="map" href="<?php echo esc_url($image['url']); ?>">
+                    <img src="<?php echo esc_url($image['sizes']['large']); ?>" />
                     <div class="overlay-link">
                         <span class="map-link"><i class="fa-solid fa-location-dot"></i> View Map</span>
                     </div>

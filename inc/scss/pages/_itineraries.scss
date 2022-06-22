@@ -16,10 +16,6 @@
       flex-direction: column;
       justify-content: center;
     }
-    .map-image {
-      height: 0;
-      padding-top: 100%;
-    }
   }
 }
 .itin-facts {
@@ -227,7 +223,7 @@
 
 .itin-slide-text {
   .heading-tertiary {
-    line-height: 3rem;
+    line-height: 1.7;
   }
 
   .destination-meta {
