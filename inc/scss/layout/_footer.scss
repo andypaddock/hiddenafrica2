@@ -169,11 +169,13 @@
   .explore-links {
     padding-top: 3.5rem;
     @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       width: 100%;
       .lower-footer-links {
         li {
-          display: inline;
-          padding-right: 2rem;
+          // display: inline;
+          padding-bottom: 1rem;
         }
       }
     }
@@ -187,11 +189,13 @@
   .about-links {
     padding-top: 3.5rem;
     @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       width: 100%;
       .lower-footer-links {
         li {
-          display: inline;
-          padding-right: 2rem;
+          // display: inline;
+          padding-bottom: 1rem;
         }
       }
     }
@@ -199,11 +203,13 @@
   .privacy-links {
     padding-top: 3.5rem;
     @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       width: 100%;
       .lower-footer-links {
         li {
-          display: inline;
-          padding-right: 2rem;
+          // display: inline;
+          padding-bottom: 1rem;
         }
       }
     }
@@ -303,6 +309,9 @@
     padding: 0rem 0 1.5rem;
     font-family: $default-font-style;
     font-weight: 700;
+    @include respond(tab-port) {
+      font-size: 1.4rem;
+    }
   }
 
   .lower-footer-links {
@@ -312,6 +321,9 @@
       flex: 1;
       a {
         color: $color-white;
+      }
+      @include respond(tab-port) {
+        font-size: 1.4rem;
       }
     }
   }

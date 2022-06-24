@@ -19,7 +19,7 @@ $filterType = get_sub_field( 'filter_by' );?>
             </ul>
         </div>
     </div>
-    <div class="mobile-filter--button"><span id="mob-filter"><i class="fa-solid fa-filter"></i></span></div>
+    <div class="mobile-filter--button"><span id="mob-filter"><i class="fa-solid fa-filter"></i></span><span class="filter-text">Filters</span></div>
 
 </div>
 <section class="side-filter-section" id="filter-section">

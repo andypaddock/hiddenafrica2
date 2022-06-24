@@ -20,7 +20,7 @@ $noMobile = get_sub_field('hide_on_mobile');?>
             </ul>
         </div>
     </div>
-    <div class="mobile-filter--button"><span id="mob-filter"><i class="fa-solid fa-filter"></i></span></div>
+    <div class="mobile-filter--button"><span id="mob-filter"><i class="fa-solid fa-filter"></i></span><span class="filter-text">Filters</span></div>
 </div>
 <section
     class="safari-type-select <?php if($bgColor == true): echo 'alt-bg'; endif; ?> <?php the_sub_field('margin_size'); ?> <?php if($noMobile == true): echo 'no-mob'; endif; ?>"

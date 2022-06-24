@@ -72,6 +72,7 @@ if( $link ):
                 <div class="logo-bar__image"><a
                         href="<?php echo site_url(); ?>"><?php get_template_part("inc/img/hiddenlogo"); ?></a></div>
                 <div class="logo-bar__button">
+                <?php if (is_singular('itineraries')):?>
                     <?php 
 $link = get_field('nav_link','options');
 if( $link ): 
@@ -82,7 +83,7 @@ if( $link ):
                     <a class="button outline" href="<?php echo esc_url( $link_url ); ?>"
                         target="<?php echo esc_attr( $link_target ); ?>"><?php if (is_singular('itineraries')):?><?php the_field('itin_cta','options'); ?><?php else:?><?php echo esc_html( $link_title ); ?><?php endif; ?></a>
                     <?php endif; ?>
-
+                    <?php endif; ?>
                 </div>
             </div>
             <menu>

@@ -259,6 +259,22 @@ section {
         }
       }
     }
+    .big-button {
+      .frm_label_button_container {
+        height: 8rem !important;
+        flex-direction: column;
+        justify-content: center;
+        white-space: unset;
+        font-family: $alt-font-header;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: normal;
+
+        p {
+          margin: 0;
+        }
+      }
+    }
     #frm_field_153_container {
       .frm_image_options .frm_image_option_container img {
         height: unset;

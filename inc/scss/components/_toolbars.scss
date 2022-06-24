@@ -1,4 +1,5 @@
 .mobile-toolbar {
+    display: none;
     position: fixed;
     bottom: 0;
     z-index: 99;
@@ -16,5 +17,8 @@
             color: $color-white;
         }
     }
+    @include respond(tab-port) {
+        display: block;
+      }
     
 }

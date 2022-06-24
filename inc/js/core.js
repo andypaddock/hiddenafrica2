@@ -7,6 +7,7 @@
 //@prepros-prepend readmore.js
 //@prepros-prepend scrollreveal.js
 
+
 jQuery(document).ready(function ($) {
   /* ADD CLASS ON SCROLL*/
 
@@ -332,7 +333,7 @@ jQuery(document).ready(function ($) {
   });
 
   new Readmore(".readmore", {
-    collapsedHeight: 187,
+    collapsedHeight: 192,
   });
 
   new Readmore(".staffreadmore", {
@@ -580,6 +581,10 @@ jQuery(document).ready(function ($) {
   $(".map-close").click(function () {
     $(".map-hero").removeClass("visible");
   });
+
+
+
+
 
   // GETTING RID OF OWL
 }); //Don't remove ---- end of jQuery wrapper

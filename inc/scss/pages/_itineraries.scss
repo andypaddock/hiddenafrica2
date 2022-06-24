@@ -30,6 +30,9 @@
   .price {
     border-left: 1px solid $color-black;
     padding: 0 1rem;
+    @include respond(phone) {
+      border-left-color: #aaa;
+    }
   }
 
   .heading-tertiary {
@@ -40,6 +43,7 @@
     border-bottom: 1px solid $color-black;
     @include respond(phone) {
       padding: 0 0 1rem 0;
+      border-bottom: none;
     }
   }
 
@@ -49,6 +53,9 @@
 
   .meta {
     padding: 1rem;
+    @include respond(phone) {
+      padding: 0;
+    }
 
     #places {
       list-style: none;
