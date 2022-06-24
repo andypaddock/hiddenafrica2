@@ -93,6 +93,13 @@
 }
 
 .home {
+  .header {
+    @include respond(tab-port) {
+      height: calc(100vh - 7rem) !important;
+    }
+
+    
+  }
   .heading-primary {
     color: $color-white;
     

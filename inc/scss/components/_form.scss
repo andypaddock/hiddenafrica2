@@ -306,7 +306,26 @@ section {
     grid-gap: 2rem!important;
   }
 }
-#frm_field_162_container .page-template-contact .frm_image_options .frm_image_option_container img {
+#frm_field_162_container .frm_image_option .frm_image_option_container img {
   padding: 0;
   height: unset;
+}
+
+section.form-short-code #frm_field_52_container .frm_label_button_container {
+  height: 8rem!important;
+}
+section.form-short-code #frm_field_141_container .frm_label_button_container {
+  height: 8rem!important;
+}
+section.form-short-code #frm_field_158_container .frm_label_button_container {
+  height: 8rem!important;
+}
+section.form-short-code #frm_field_157_container .frm_label_button_container {
+  height: 8rem!important;
+}
+section.form-short-code #frm_field_156_container .frm_label_button_container {
+  height: 8rem!important;
+}
+section.form-short-code #frm_field_155_container .frm_label_button_container {
+  height: 8rem!important;
 }

@@ -5,7 +5,7 @@
  */
 ?>
 <div class="filler-block"></div>
-
+<?php if (!is_page_template( 'page-templates/contact.php' )) :?>
 <?php $linkSwitch = get_field('force', 'options');?>
 <?php if($linkSwitch == true): ?>
 
@@ -80,7 +80,7 @@ if( $link ):
     </div>
     <?php endif;?>
 </div>
-
+<?php endif; ?>
 
 <?php $displayLogo = get_field('where_to_display','options');
 if(in_array('all', $displayLogo, true)): ?>
@@ -290,6 +290,18 @@ $link_target = $link['target'] ? $link['target'] : '_self';
 
 </footer>
 </main>
+<div class="mobile-toolbar">
+    <?php 
+$link = get_field('nav_link','options');
+if( $link ): 
+    $link_url = $link['url'];
+    $link_title = $link['title'];
+    $link_target = $link['target'] ? $link['target'] : '_self';
+    ?>
+    <a class="button outline" href="<?php echo esc_url( $link_url ); ?>"
+        target="<?php echo esc_attr( $link_target ); ?>"><?php if (is_singular('itineraries')):?><?php the_field('itin_cta','options'); ?><?php else:?><?php echo esc_html( $link_title ); ?><?php endif; ?></a>
+    <?php endif; ?>
+</div>
 <div class="sidebar">
     <?wp_nav_menu( array( 
                         'theme_location' => 'mobile-menu',

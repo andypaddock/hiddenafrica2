@@ -113,3 +113,8 @@
     }
   }
 }
+#viewmorelink {
+  @include respond(phone) {
+    display: none;
+  }
+}
