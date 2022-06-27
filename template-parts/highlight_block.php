@@ -21,20 +21,22 @@
             </div>
             <?php endif; ?>
             <div class="highlight-text">
-                <?php
+                <button type="button" class="collapsible">Highlights</button>
+                <div class="content">
+                    <?php
                 if( have_rows('blocks') ):
                 while ( have_rows('blocks') ) : the_row();?>
-                <div class="text tile">
-                    <?php if (get_sub_field('title')):?>
-                    <h3 class="heading-tertiary"><?php the_sub_field('title');?></h3>
-                    <?php endif;?>
-                    <?php the_sub_field('text');?>
+                    <div class="text tile">
+                        <?php if (get_sub_field('title')):?>
+                        <h3 class="heading-tertiary"><?php the_sub_field('title');?></h3>
+                        <?php endif;?>
+                        <?php the_sub_field('text');?>
+                    </div>
+
+                    <?php endwhile; endif;?>
                 </div>
 
-                <?php endwhile; endif;?>
             </div>
-
-
 
 
         </div>

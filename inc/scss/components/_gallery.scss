@@ -8,6 +8,16 @@
   @include respond(phone) {
     display: flex;
     flex-direction: column;
+    &>div:nth-child(2) {
+      position: absolute;
+      transform: rotate(8deg) translate(15px, 10px);
+      width: 40rem;
+    }
+    &>div:nth-child(3) {
+      position: absolute;
+      transform: rotate(-8deg) translate(15px, 15px);
+      width: 40rem;
+    }
   }
 }
 

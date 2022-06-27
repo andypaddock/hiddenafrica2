@@ -300,6 +300,9 @@
     .news-terms {
       font-size: 1.1rem;
       padding: 2rem 0 0;
+      a {
+        color: $color-primary;
+      }
     }
   }
 
